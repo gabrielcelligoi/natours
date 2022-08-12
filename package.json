@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/gabrielcelligoi/natours/issues"
   },
-  "homepage": "https://github.com/gabrielcelligoi/natours#readme"
+  "homepage": "https://github.com/gabrielcelligoi/natours#readme",
+  "devDependencies": {
+    "node-sass": "^7.0.1"
+  }
 }
