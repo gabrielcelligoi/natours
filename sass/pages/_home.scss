@@ -13,4 +13,14 @@
       rgba($color-primary-dark, 0.8)),
     url(../img/nat-4.jpg);
   background-size: cover;
+
+  transform: skewY(-7deg);
+
+  //select only the direct child of .section-features (which is .row) and all things inside it (*) to turn them all 7deg
+  & > * {
+    transform: skewY(7deg);
+  }
+
+  //move everything up
+  margin-top: -10rem;
 }
