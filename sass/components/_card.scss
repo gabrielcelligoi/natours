@@ -1,4 +1,6 @@
 .card {
+
+  //FUNCTIONALITY
   perspective: 150rem;
   -moz-perspective: 150rem; //this is for it works in mozila browser
   position: relative;
@@ -13,6 +15,7 @@
     width: 100%;
     backface-visibility: hidden;
     border-radius: 3px;
+    overflow: hidden; //when I put the image on the card, it overflows its parent and the border-radius of 3px was gone. This fixes the problem.
     box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
 
     color: white;
@@ -37,5 +40,26 @@
 
   &:hover &__side--back {
     transform: rotateY(0);
+  }
+
+  //FRONT SIDE STYLING
+  &__picture {
+    background-size: cover;
+    height: 23rem;
+    background-blend-mode: screen;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); //this is for guarantee that the polygon will work in all browsers
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+
+    &--1 {
+      background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark), url(../img/nat-5.jpg);
+    }
+
+    &--2 {
+      background-image: url(../img/nat-5.jpg);
+    }
+
+    &--3 {
+      background-image: url(../img/nat-5.jpg);
+    }
   }
 }
