@@ -5,17 +5,35 @@
   background-color: $color-white;
   border-radius: 3px;
   padding: 6rem;
+  padding-left: 9rem;
   font-size: $default-font-size;
+  transform: skewX(-12deg);
+
 
   &__shape {
     width: 15rem;
     height: 15rem;
-    background-color: orangered;
     float: left;
-    -webkit-shape-outside: circle(50% at 50% 50%);
-    shape-outside: circle(50% at 50% 50%);
-    
+
+    //create a circle based on the square
     -webkit-clip-path: circle(50% at 50% 50%);
     clip-path: circle(50% at 50% 50%);
+
+    //create a shape outside the circle to adjust the text on that shape. the element must be floated.
+    -webkit-shape-outside: circle(50% at 50% 50%);
+    shape-outside: circle(50% at 50% 50%);
+
+    //transform the "margin" around the circle. The skewX is to un-spin the content spined on .story
+    transform: translateX(-3rem) skewX(12deg);
+  }
+
+  &__image {
+    height: 100%;
+    
+  }
+
+  &__text {
+    //The skewX is to un-spin the content spined on .story
+    transform: skewX(12deg);
   }
 }
