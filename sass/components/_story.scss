@@ -43,10 +43,17 @@
     position: absolute;
     top: 50%; //center the content on the relative parent
     left: 50%; //center the content on the relative parent
-    transform: translate(-50%, -50%); //center the content on the relative parent
+    transform: translate(-50%, 20%); //center the content on the relative parent (-50%) BUT put it down in the Y axis (20%) to create the hover effect
     text-align: center; //center the content on the relative parent
     color: $color-white;
     text-transform: uppercase;
     font-size: 1.7rem;
+    opacity: 0; //create the initial state to make the hover effect
+    transition: all .5s;
+  }
+
+  &:hover &__caption {
+    opacity: 1;
+    transform: translate(-50%, -50%);
   }
 }
