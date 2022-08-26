@@ -14,6 +14,7 @@
     border-bottom: 3px solid transparent; //as I have a visible border when the input is focused, I added this transparent border to avoid that the position of the form's fields change when someone click in some input
     width: 90%;
     display: block;
+    transition: all .3s;
     
     &:focus {
       outline: none;
