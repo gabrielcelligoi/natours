@@ -32,6 +32,6 @@
 }
 
 .section-stories {
+  position: relative; //I have a video on the background that have the position absolute
   padding: 15rem 0;
-  background-color: $color-gray-light-1;
 }
